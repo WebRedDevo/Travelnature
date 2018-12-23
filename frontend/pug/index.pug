@@ -9,7 +9,31 @@ html(lang='en')
     main.main 
       section.main__section.section--initial-screen
         h1 Make your travel nice
-        a(href='#') View tours
+        a(href='#').button View tours
+        .news-articles.flex
+          article.article-news
+            h3 Summer is coming
+            p 
+              strong Where to travel? 
+              |Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            a(href="#") Read more
+          article.article-news
+            h3 Be warm and happy
+            p 
+              strong Where to travel? 
+              |Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            a(href="#") Read more
+        ul.initial-screen__nav-list.flex
+          li.nav-list__item.active
+            a(href="#") News
+          li.nav-list__item
+            a(href="#") Sales
+          li.nav-list__item
+            a(href="#") Tours
+          li.nav-list__item
+            a(href="#") Flight
+          li.nav-list__item
+            a(href="#") Blog
       section.main__section.section--what-we-do
         .container
           h2 Who we are & What we do?
@@ -28,7 +52,7 @@ html(lang='en')
               +icon('avia-tickets')
               strong Hotel
               p Booking
-              
+        hr
       section.main__section.section--happy-clients
         .container
           h2 Happy Clients
@@ -48,9 +72,38 @@ html(lang='en')
                 span Peter Henderson
               p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu.
             img(src='images/img-response-2.jpg' alt='').response-img
+          hr
       section.main__section.section--special-deals
         .container
           h2 Special Deals
           p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            a(href='#') Read More ››
+        hr
+        .special-deals__slider.flex
+          .slide.first
+            img(src="images/special-deals-1.jpg" alt="")    
+          .slide
+            img(src="images/img-response-2.jpg" alt="")
+          .slide.active
+            button.slider-button.prev
+            button.slider-button.next
+            img(src="images/special-deals-1.jpg" alt="")
+            footer.slide__footer
+              h3 Special trip
+              .flex
+                .place Miami, 
+                  span 3Nights
+                .coast ONLY 
+                  span $245
+          .slide
+            img(src="images/img-response-1.jpg" alt="")
+          .slide.last
+            img(src="images/special-deals-1.jpg" alt="")
+        hr
+      section.main__section.section--about-us
+        .container
+          h2 About us
+          h3 Our team
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          h3 Our Company
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
     include inc/footer.pug      

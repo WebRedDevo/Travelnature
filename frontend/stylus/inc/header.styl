@@ -11,11 +11,27 @@
   font-size 24px
   letter-spacing 1.41px
 
-.nav__list-item a
-  color #ffffff
-  font-size 20px
-  font-weight 600
-  text-transform uppercase
-  letter-spacing 1.18px
-  font-family 'Akrobat'
-  margin-left 50px
+.nav__list-item
+  &.active,&:hover
+    a
+      &:after
+        width 100%
+  a
+    color #ffffff
+    font-size 20px
+    font-weight 600
+    text-transform uppercase
+    letter-spacing 1.18px
+    font-family 'Akrobat'
+    margin-left 50px
+    position relative
+    padding-bottom 5px
+    &:after
+      content ''
+      position absolute
+      left 0
+      bottom 0
+      width 0%
+      height 1px
+      background-color #fff
+      transition .33s
