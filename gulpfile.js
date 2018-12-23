@@ -81,12 +81,13 @@ suffix: ".min"
 gulp.task('svg:build', function () {
 return gulp.src('frontend/assets/images/svg/*.svg')
 .pipe(gulp.src('frontend/assets/images/svg/maps/*.svg')) 
-.pipe(cheerio({
-run: function ($) {
-$('[fill]').removeAttr('fill');
-$('[style]').removeAttr('style');
-}
-}))
+// .pipe(cheerio({
+// run: function ($) {
+// $('[fill]').removeAttr('fill');
+// $('[style]').removeAttr('style');
+// },
+// parserOptions: { xmlMode: true }
+// }))
 .pipe(svgmin({
 js2svg: {
 pretty: true

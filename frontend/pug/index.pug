@@ -7,7 +7,50 @@ html(lang='en')
   body
     include inc/header.pug
     main.main 
-      .main__initial-screen
+      section.main__section.section--initial-screen
         h1 Make your travel nice
         a(href='#') View tours
-    
+      section.main__section.section--what-we-do
+        .container
+          h2 Who we are & What we do?
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            a(href='#') Read More ››
+          .section--what-we-do__icons.flex
+            .what-we-do__icon.flex
+              +icon('avia-tickets')
+              strong Tours
+              p Trips
+            .what-we-do__icon.flex
+              +icon('avia-tickets')
+              strong Flight
+              p Tickets
+            .what-we-do__icon.flex
+              +icon('avia-tickets')
+              strong Hotel
+              p Booking
+              
+      section.main__section.section--happy-clients
+        .container
+          h2 Happy Clients
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            a(href='#') Read More ››
+          .section--happy-clients__response.response--left.flex
+            .response-info
+              .response-info__user.flex
+                img(src='images/img-user-1.jpg' alt='')
+                span Peter Henderson
+              p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu.
+            img(src='images/img-response-1.jpg' alt='').response-img
+          .section--happy-clients__response.response--right.flex
+            .response-info
+              .response-info__user.flex
+                img(src='images/img-user-2.jpg' alt='')
+                span Peter Henderson
+              p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu.
+            img(src='images/img-response-2.jpg' alt='').response-img
+      section.main__section.section--special-deals
+        .container
+          h2 Special Deals
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            a(href='#') Read More ››
+    include inc/footer.pug      

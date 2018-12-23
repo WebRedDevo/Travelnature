@@ -100,8 +100,7 @@ input[type='submit'] + label
 
 .nav__list-item a
 {
-    font-size: 1.25rem;
-    font-weight: 600;
+    font: 600 1.25rem 'Akrobat';
 
     margin-left: 50px;
 
@@ -111,7 +110,43 @@ input[type='submit'] + label
     color: #fff;
 }
 
-.main__initial-screen
+.main__section .container
+{
+    max-width: 970px;
+    margin: 0 auto;
+    padding: 72px 0;
+}
+
+.main h2
+{
+    font: 400 3rem/2.375rem 'Avenir Next Cyr';
+
+    margin-bottom: 33px;
+
+    text-align: center;
+
+    color: #4a4a4a;
+}
+
+.main p
+{
+    font: 400 1rem/1.75rem 'Avenir Next Cyr';
+
+    color: #505050;
+}
+
+.main p a
+{
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.75rem;
+
+    margin-left: 8px;
+
+    color: #4a90e2;
+}
+
+.section--initial-screen
 {
     position: relative;
 
@@ -122,16 +157,31 @@ input[type='submit'] + label
     background: url('../images/main-bg-1.jpg') no-repeat 0 0/cover;
 }
 
-.main__initial-screen a
+.section--initial-screen h1
 {
-    font-size: 1.5rem;
-    font-weight: 400;
+    font: 400 9rem/9rem 'UnicaOne-Regular';
+
+    position: relative;
+    z-index: 2;
+
+    max-width: 733px;
+    margin-bottom: 90px;
+
+    letter-spacing: 0.1325rem;
+    text-transform: uppercase;
+
+    color: #fff;
+}
+
+.section--initial-screen a
+{
+    font: 400 1.5rem 'Akrobat';
 
     position: relative;
     z-index: 2;
 
     margin-left: 10px;
-    padding: 11px 60px;
+    padding: 13px 60px;
 
     letter-spacing: 0.07688rem;
     text-transform: uppercase;
@@ -140,7 +190,7 @@ input[type='submit'] + label
     border: 1px solid #fff;
 }
 
-.main__initial-screen:before
+.section--initial-screen:before
 {
     position: absolute;
     top: 0;
@@ -159,7 +209,7 @@ input[type='submit'] + label
     background: radial-gradient(circle 667px at 37.51% -.54%, rgba(255,255,255,0) 0%, rgba(0,0,0,.49) 100%);
 }
 
-.main__initial-screen:after
+.section--initial-screen:after
 {
     position: absolute;
     top: 75px;
@@ -172,20 +222,118 @@ input[type='submit'] + label
     content: '';
 
     border: 1px solid #fff;
+    border-bottom: 0;
 }
 
-.main h1
+.section--what-we-do__icons
 {
-    font: 400 9rem/9rem 'UnicaOne-Regular';
+    margin-top: 45px;
 
-    position: relative;
-    z-index: 2;
+    justify-content: center;
+}
 
-    max-width: 733px;
-    margin-bottom: 90px;
+.section--what-we-do .what-we-do__icon
+{
+    flex-direction: column;
 
-    letter-spacing: 0.1325rem;
+    width: 33%;
+
+    text-align: center;
+
+    justify-content: center;
+}
+
+.section--what-we-do .what-we-do__icon .icon
+{
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 26px;
+}
+
+.section--what-we-do .what-we-do__icon strong
+{
+    font: 500 1.375rem/1.875rem 'Avenir Next Cyr';
+
     text-transform: uppercase;
 
-    color: #fff;
+    color: #4e5665;
+}
+
+.section--happy-clients__response
+{
+    position: relative;
+
+    margin: 65px 0;
+
+    align-items: center;
+}
+
+.section--happy-clients__response.response--left
+{
+    justify-content: flex-end;
+}
+
+.section--happy-clients__response.response--left .response-info
+{
+    left: 0;
+}
+
+.section--happy-clients__response.response--right
+{
+    justify-content: flex-start;
+}
+
+.section--happy-clients__response.response--right .response-info
+{
+    right: 0;
+}
+
+.section--happy-clients .response-info
+{
+    position: absolute;
+
+    width: 470px;
+    height: 289px;
+    padding: 30px 45px;
+
+    background: #fff;
+    box-shadow: 0 2px 40px rgba(0,0,0,.2);
+}
+
+.section--happy-clients .response-info p
+{
+    overflow: hidden;
+
+    max-height: 166px;
+}
+
+.section--happy-clients .response-info__user
+{
+    margin-bottom: 16px;
+
+    align-items: center;
+}
+
+.section--happy-clients .response-info__user img
+{
+    width: 46px;
+    height: 46px;
+
+    border: 1px solid #979797;
+    border-radius: 50%;
+}
+
+.section--happy-clients .response-info__user span
+{
+    font: 400 1.5rem/1.5625rem 'Avenir Next Cyr';
+
+    margin-left: 15px;
+
+    color: #4e5665;
+}
+
+.section--happy-clients .response-img
+{
+    width: 570px;
+    height: 428px;
 }
