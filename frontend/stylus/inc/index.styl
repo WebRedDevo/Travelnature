@@ -6,41 +6,38 @@
     opacity 0.5
   &__section
     .container
-      max-width 970px;
+      max-width 970px
       margin 0 auto
       padding 72px 0
-  h2
-    color: #4a4a4a;
-    font-family: 'Avenir Next Cyr';
-    font-size: 48px;
-    font-weight: 400;
-    line-height: 38px;
-    text-align center
-    margin-bottom 33px
-  h3
-    color #505050
-    font-family: 'Avenir Next Cyr';
-    font-size 24px
-    font-weight 500
-    margin-bottom 5px
-  p
-    color: #505050;
-    font-family: 'Avenir Next Cyr';
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 28px;
-    a
-      color #4a90e2
+    h2
+      color #4a4a4a
+      font-size 48px
+      font-weight 400
+      line-height 38px
+      text-align center
+      margin-bottom 33px
+    h3
+      color #505050
+      font-size 24px
+      font-weight 500
+      margin-bottom 5px
+    p
+      color #505050
       font-size 16px
-      margin-left 8px
-      font-weight 600
+      font-weight 400
       line-height 28px
+      a
+        color #4a90e2
+        font-size 16px
+        margin-left 8px
+        font-weight 600
+        line-height 28px
 .article-news
   max-width 250px
   margin-right 35px
   h3
     color #ffffff
-    font-family "Akrobat"
+    font-family Akrobat
     font-size 24px
     font-weight 600
     letter-spacing 1.41px
@@ -66,58 +63,82 @@
 
 .section
   &--initial-screen
-    height 100vh
-    background-image url(../images/main-bg-1.jpg)
-    background-size cover
-    background-repeat no-repeat
-    padding-left 125px
-    padding-top 300px
-    position relative
-    .news-articles
-      z-index 9
-      position relative
-      margin-left 490px
-    .initial-screen__nav-list
-      position absolute
-      bottom 20px
-      left 0
-      right 0
-      margin auto
-      z-index 9
-      justify-content center
-      &:before
-        content ''
-        left 18px
-        bottom 0
-        height 1px
-        background #fff
-        position absolute
-        max-width 460px
-        width 100%
-      &:after
-        content ''
-        right 18px
-        bottom 0
-        height 1px
-        background #fff
-        position absolute
-        max-width 460px
-        width 100%
-    .nav-list__item
-      &.active,&:hover
-        a
-          &:after
-            width 100%
-      a
-        color #ffffff
-        font-family Akrobat
-        margin 0 25px
-        font-size 20px
+    padding-top 150px
+    h1
+      color #34343f
+      font-size 115px
+      font-weight 500
+      line-height 144px
+      letter-spacing 11px
+      padding 25px 40px
+      background #fff
+      margin-left -350px
+    .left-side
+      max-width 805px
+      min-height 610px
+    .right-side
+      padding 0 35px
+
+      h3
+        color #34343f
+        font-size 24px
+        font-weight 500
+        line-height 26px
+
+      p
+        color #34343f
+        font-size 16px
         font-weight 400
+        line-height 27px
+        max-width 500px
+      .button
+        color #000000
+        font-size 14px
+        font-weight 700
+        background-color #edba51
+        padding 40px 50px
+        margin-top 60px
+        margin-left -100px
+        letter-spacing 3.5px
+        display inline-flex
+        align-items center
+        &:after
+          content ''
+          width 64px
+          height 1px
+          margin-left 22px
+          background-color #000000
+    hr
+      margin 30px 0 40px
+    .buttons
+      .active
+        background-color #edba51
+        padding 5px 15px
+        margin-right 20px
         text-transform uppercase
-        letter-spacing 0.4px
+        &:hover
+          &:after,&:before
+            width 0
+      a
+        color #34343f
+        font-size 14px
+        margin-right 35px
+        font-weight 500
         position relative
-        padding-bottom 6px
+        padding-bottom 3px
+        padding-top 3px
+        &:hover
+          &:after,&:before
+            width 100%
+        &:before
+          content ''
+          position absolute
+          right 0
+          top 0
+          width 0%
+          height 1px
+          background-color #303741
+          transition .33s
         &:after
           content ''
           position absolute
@@ -125,50 +146,10 @@
           bottom 0
           width 0%
           height 1px
-          background-color #fff
+          background-color #303741
           transition .33s
-    h1
-      color: #ffffff;
-      font-family: 'UnicaOne-Regular';
-      font-size: 144px;
-      font-weight: 400;
-      line-height: 144px;
-      text-transform: uppercase;
-      letter-spacing: 2.12px;
-      max-width 733px
-      margin-bottom 90px
-      position relative
-      z-index 2
-    .button
-      color #ffffff
-      font-size 24px
-      font-weight 400
-      text-transform uppercase
-      letter-spacing 1.23px
-      padding 13px 60px
-      border 1px solid #fff
-      font-family 'Akrobat'
-      margin-left 10px
-      position relative
-      z-index 2
-    &:before
-      content ''
-      position absolute
-      top 0
-      left 0
-      right 0
-      bottom 0
-      background-image radial-gradient(circle 667px at 37.51% -0.54%, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.49) 100%)
-    &:after
-      content ''
-      position absolute
-      top 75px
-      bottom 20px
-      left 17px
-      right 17px
-      margin auto
-      border 1px solid #ffffff
-      border-bottom 0
+        &:last-child
+          margin-right 0
   &--what-we-do
     &__icons
       margin-top 45px
@@ -184,7 +165,6 @@
         margin 0 auto 26px
       strong
         color #4e5665
-        font-family "Avenir Next Cyr"
         font-size 22px
         font-weight 500
         line-height 30px
@@ -192,7 +172,6 @@
         text-transform uppercase
       p
         color #909090
-        font-family "Avenir Next Cyr"
         font-size 14px
         font-weight 500
   &--happy-clients

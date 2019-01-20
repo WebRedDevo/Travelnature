@@ -1,31 +1,33 @@
 .header
   z-index 99
   position absolute
-  justify-content space-between
+  justify-content flex-start
   width 100%
-  padding 0 50px
-  height 75px
+  top 0
+  padding 40px 50px
+
   align-items center
 .logotype
-  color #ffffff
+  color #303741
   font-size 24px
-  letter-spacing 1.41px
+  font-weight 500
+  background-color #edba51
+  padding 5px 16px
 
+.header__nav
+  margin-left 135px
 .nav__list-item
   &.active,&:hover
     a
       &:after
         width 100%
   a
-    color #ffffff
-    font-size 20px
+    color #303741
+    font-size 14px
     font-weight 600
-    text-transform uppercase
-    letter-spacing 1.18px
-    font-family 'Akrobat'
-    margin-left 50px
+    margin-right 38px
     position relative
-    padding-bottom 5px
+    padding-bottom 2px
     &:after
       content ''
       position absolute
@@ -33,5 +35,5 @@
       bottom 0
       width 0%
       height 1px
-      background-color #fff
+      background-color #303741
       transition .33s

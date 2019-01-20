@@ -1,0 +1,35 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    link(rel='stylesheet' href='css/style.min.css')
+    title main page
+  body
+    include inc/header.pug
+    main.main 
+      section.main__section.section--initial-screen.flex
+        .left-side
+          img(src='images/initial-1.jpg' alt='')        
+        .right-side
+          h1 News
+          .buttons
+            a(href='category-articles.html').active  News
+            a(href='category-guides.html') Travel Guide
+            a(href='#') Hottest spots
+            a(href='#') Fresh deals
+          hr
+          h3 
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. labore et dolore magna aliqua. Ut enim ad minim veniam. Read more
+          a(href='#').button.button--yellow  Discover
+      .flex.articles
+        +article('Discover Sicily. Places worth visiting')
+        +article('Discover Sicily. Places worth visiting')
+        +article('Discover Sicily. Places worth visiting')
+        +article('Discover Sicily. Places worth visiting')
+        +article('Discover Sicily. Places worth visiting')
+        +article('Discover Sicily. Places worth visiting')
+        +article('Discover Sicily. Places worth visiting')
+        +article('Discover Sicily. Places worth visiting')
+        
+      
+    include inc/footer.pug      

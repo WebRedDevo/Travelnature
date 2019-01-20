@@ -4,7 +4,62 @@ body
   font-family sans-serif
 .flex
   display flex
+.main
+  .article-post
+    max-width calc(25% - 20px)
+    background #fff
+    border-radius 15px
+    margin 0 10px
+    box-shadow 0 0 15px rgba(0,0,0 .10)
+    padding 20px 0
+    margin-bottom 20px
+    transition .28s
+    &:hover
+      transform scale(1.04)
+    &__info
+      padding 0 35px
+      margin-bottom 20px
+      .info-item
+        &:first-child
+          margin-right 10px
+        .icon
+          width 20px
+          height 20px
+          fill #505050
+          margin-left 8px
+        span
+          color #505050
+          line-height 18px
+          font-size 16px
 
+
+    h3
+      padding 20px 35px
+      color #000
+      font-size 24px
+      font-weight 500
+    img
+      height 180px
+    p
+      padding 20px 35px
+      max-height 110px
+      margin-bottom 25px
+      overflow hidden
+      color #505050
+      font-size 16px
+      font-weight 400
+      line-height 28px
+  .articles
+    margin 50px 0
+    justify-content center
+    flex-wrap wrap
+    padding 0 10px
+
+
+.footer
+  background #121212
+  height 300px
 @import 'inc/reset.styl'
 @import 'inc/header.styl'
 @import 'inc/index.styl'
+@import 'inc/page-article.styl'
