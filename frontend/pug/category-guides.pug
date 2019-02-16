@@ -7,20 +7,21 @@ html(lang='en')
   body
     include inc/header.pug
     main.main 
-      section.main__section.section--initial-screen.flex
+      section.main__section.section--initial-screen.flex.top.category-guides
+        img(src='images/destinations-wallpaper.jpg' alt='').wallpaper
         .left-side
-          img(src='images/main-bg-1.jpg' alt='')        
+                 
         .right-side
-          h1 Travel Guide
-          .buttons
-            a(href='category-articles.html') News
-            a(href='category-guides.html').active Travel Guide
-            a(href='#') Hottest spots
-            a(href='#') Fresh deals
+          h1 Travel Guides
+          h2 
+            span Palermo
           hr
           p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Read more
-          a(href='#').button.button--yellow  Discover
-      .flex.articles
+          a(href='page-destination.html').button.button--yellow  Discover
+      section.section-description-category.flex.container
+        h2 Travel Guides
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      .flex.articles.container
         +article('Discover Sicily. Places worth visiting')
         +article('Discover Sicily. Places worth visiting')
         +article('Discover Sicily. Places worth visiting')

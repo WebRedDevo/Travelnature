@@ -57,14 +57,37 @@ body
   .articles
     flex-wrap wrap
     padding 0 10px
+.button
+  color #000000
+  font-size 14px
+  font-weight 700
+  background-color #edba51
+  padding 40px 50px
+
+  letter-spacing 3.5px
+  display inline-flex
+  align-items center
+  &:after
+    content ''
+    width 64px
+    height 1px
+    margin-left 22px
+    background-color #000000
+    transition .33s
+  &:hover
+    &:after
+      transform translateX(50px)
 .button--yellow
   background var(--yellow)
   color var(--blackColor)
 .footer
   background #232323
   height 300px
+.top
+  margin-top 145px
 @import 'inc/reset.styl'
 @import 'inc/header.styl'
 @import 'inc/index.styl'
 @import 'inc/page-article.styl'
+@import 'inc/page-destination.styl'
 @import 'inc/category.styl'
