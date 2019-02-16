@@ -24,85 +24,6 @@ body
     margin: auto;
 }
 
-.main .article-post
-{
-    max-width: calc(33% - 20px);
-    margin: 0 10px;
-    margin-bottom: 20px;
-    padding: 20px 0;
-
-    transition: .28s;
-
-    border-radius: 10px;
-    background: #fff;
-    box-shadow: 0 0 15px rgba(0,0,0,.1);
-}
-
-.main .article-post:hover,
-.main .article-post:focus
-{
-    -webkit-transform: scale(1.04);
-            transform: scale(1.04);
-}
-
-.main .article-post__info
-{
-    margin-bottom: 20px;
-    padding: 0 35px;
-}
-
-.main .article-post__info .info-item:first-child
-{
-    margin-right: 10px;
-}
-
-.main .article-post__info .info-item .icon
-{
-    width: 20px;
-    height: 20px;
-    margin-left: 8px;
-
-    fill: #505050;
-}
-
-.main .article-post__info .info-item span
-{
-    font-size: 1rem;
-    line-height: 1.125rem;
-
-    color: #505050;
-}
-
-.main .article-post h3
-{
-    font-size: 1.5rem;
-    font-weight: 500;
-
-    padding: 20px 35px;
-
-    color: #000;
-}
-
-.main .article-post img
-{
-    height: 180px;
-}
-
-.main .article-post p
-{
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.75rem;
-
-    overflow: hidden;
-
-    max-height: 110px;
-    margin-bottom: 25px;
-    padding: 20px 35px;
-
-    color: #505050;
-}
-
 .main .articles
 {
     padding: 0 10px;
@@ -168,6 +89,24 @@ body
 .top
 {
     margin-top: 145px;
+}
+
+.close
+{
+    position: fixed;
+    z-index: 99;
+    top: 15px;
+    right: 50px;
+
+    background: 0;
+}
+
+.close .icon
+{
+    width: 45px;
+    height: 45px;
+
+    fill: #ccc;
 }
 
 *
@@ -1037,6 +976,164 @@ input[type='submit'] + label
     margin-bottom: 20px;
 }
 
+.article-post
+{
+    overflow: hidden;
+
+    max-width: calc(33% - 20px);
+    margin: 0 10px;
+    margin-bottom: 20px;
+    padding: 20px 0;
+
+    transition: .28s;
+
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 0 15px rgba(0,0,0,.1);
+}
+
+.article-post:hover,
+.article-post:focus
+{
+    -webkit-transform: scale(1.04);
+            transform: scale(1.04);
+}
+
+.article-post:hover img,
+.article-post:focus img
+{
+    -webkit-transform: scale(1);
+            transform: scale(1);
+}
+
+.article-post__info
+{
+    margin-bottom: 20px;
+    padding: 0 35px;
+}
+
+.article-post__info .info-item:first-child
+{
+    margin-right: 10px;
+}
+
+.article-post__info .info-item .icon
+{
+    width: 20px;
+    height: 20px;
+    margin-left: 8px;
+
+    fill: #505050;
+}
+
+.article-post__info .info-item span
+{
+    font-size: 1rem;
+    line-height: 1.125rem;
+
+    color: #505050;
+}
+
+.article-post h3
+{
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.8125rem;
+
+    padding: 20px 35px;
+
+    color: #000;
+}
+
+.article-post img
+{
+    height: 180px;
+
+    transition: .69s;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+}
+
+.article-post p
+{
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.75rem;
+
+    overflow: hidden;
+
+    max-height: 110px;
+    margin-bottom: 25px;
+    padding: 20px 35px;
+
+    color: #505050;
+}
+
+.article-guide
+{
+    position: relative;
+
+    overflow: hidden;
+
+    margin-bottom: 20px;
+
+    transition: .33s;
+
+    border-radius: 5px;
+}
+
+.article-guide:hover,
+.article-guide:focus
+{
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+}
+
+.article-guide:hover .button:after,
+.article-guide:focus .button:after
+{
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+}
+
+.article-guide:before
+{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    content: '';
+
+    opacity: .23;
+    background: #000;
+}
+
+.article-guide a
+{
+    padding: 50px;
+
+    align-items: center;
+    justify-content: space-between;
+}
+
+.article-guide img
+{
+    position: absolute;
+    z-index: -2;
+    left: 0;
+}
+
+.article-guide h3
+{
+    font-size: 5rem;
+    font-weight: 500;
+
+    color: #fff;
+}
+
 .page-articles
 {
     max-width: 850px;
@@ -1054,23 +1151,6 @@ input[type='submit'] + label
     font-weight: 500;
 
     padding: 0 60px;
-}
-
-.page-articles .close
-{
-    position: fixed;
-    top: 100px;
-    right: 50px;
-
-    background: 0;
-}
-
-.page-articles .close .icon
-{
-    width: 50px;
-    height: 50px;
-
-    fill: #ccc;
 }
 
 .page-articles .article-post__info

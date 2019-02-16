@@ -14,7 +14,7 @@
         </form><a class="login" href="#">Sign in</a>
       </div>
       <nav class="header__nav">
-        <ul class="nav__list flex">
+        <ul class="nav__list flex"> 
           <li class="nav__list-item"><a class="active" href="category-articles.html">News</a></li>
           <li class="nav__list-item"><a href="category-guides.html">Guides</a></li>
           <li class="nav__list-item"><a href="#">Journal</a></li>
@@ -24,7 +24,12 @@
     </header>
     <main class="main"> 
       <article class="page-destination">
-        <div class="initial-screen"><img class="wallpaper" src="images/destinations-wallpaper.jpg" alt="">
+        <div class="initial-screen">
+          <button class="close">
+                <svg class="icon icon-cancel ">
+                  <use xlink:href="#icon-cancel"></use>
+                </svg>
+          </button><img class="wallpaper" src="images/destinations-wallpaper.jpg" alt="">
           <div class="container initial-screen__info">
             <h1>Palermo</h1>
             <form class="destination__form flex" method="GET">

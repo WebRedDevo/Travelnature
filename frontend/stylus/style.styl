@@ -10,50 +10,7 @@ body
   max-width 1280px
   margin auto
 .main
-  .article-post
-    max-width calc(33% - 20px)
-    background #fff
-    border-radius 10px
-    margin 0 10px
-    box-shadow 0 0 15px rgba(0,0,0 .10)
-    padding 20px 0
-    margin-bottom 20px
-    transition .28s
-    &:hover
-      transform scale(1.04)
-    &__info
-      padding 0 35px
-      margin-bottom 20px
-      .info-item
-        &:first-child
-          margin-right 10px
-        .icon
-          width 20px
-          height 20px
-          fill #505050
-          margin-left 8px
-        span
-          color #505050
-          line-height 18px
-          font-size 16px
 
-
-    h3
-      padding 20px 35px
-      color #000
-      font-size 24px
-      font-weight 500
-    img
-      height 180px
-    p
-      padding 20px 35px
-      max-height 110px
-      margin-bottom 25px
-      overflow hidden
-      color #505050
-      font-size 16px
-      font-weight 400
-      line-height 28px
   .articles
     flex-wrap wrap
     padding 0 10px
@@ -85,9 +42,20 @@ body
   height 300px
 .top
   margin-top 145px
+.close
+  position fixed
+  top 15px
+  right 50px
+  z-index 99
+  background 0
+  .icon
+    width 45px
+    height 45px
+    fill #ccc
 @import 'inc/reset.styl'
 @import 'inc/header.styl'
 @import 'inc/index.styl'
+@import 'inc/articles.styl'
 @import 'inc/page-article.styl'
 @import 'inc/page-destination.styl'
 @import 'inc/category.styl'

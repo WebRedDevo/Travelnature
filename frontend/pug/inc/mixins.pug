@@ -3,7 +3,7 @@ mixin icon(name,mod)
   svg(class="icon icon-" + name + ' ' + mod)
       use(xlink:href="#icon-" + name)
 
-mixin article(title)
+mixin article(title, image = 'main-bg-1.jpg')
   article.article-post
     a(href='page-article.html')
       h3= title
@@ -15,5 +15,14 @@ mixin article(title)
           span 89
           +icon('comment')
           
-      img(src='images/main-bg-1.jpg' alt='')
+      img(src='images/' + image alt='')
       p Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+
+
+
+mixin guide(title, image = 'destinations-wallpaper.jpg')
+  article.article-guide 
+    a(href='page-destination.html').flex
+      img(src='images/' + image alt='')
+      h3= title 
+      button.button.button--yellow  Discover

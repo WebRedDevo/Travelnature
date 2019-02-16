@@ -1,0 +1,86 @@
+.article-post
+  max-width calc(33% - 20px)
+  background #fff
+  border-radius 8px
+  margin 0 10px
+  box-shadow 0 0 15px rgba(0,0,0 .10)
+  padding 20px 0
+  margin-bottom 20px
+  transition .28s
+  overflow hidden
+  &:hover
+    transform scale(1.04)
+    img
+      transform scale(1)
+  &__info
+    padding 0 35px
+    margin-bottom 20px
+    .info-item
+      &:first-child
+        margin-right 10px
+      .icon
+        width 20px
+        height 20px
+        fill #505050
+        margin-left 8px
+      span
+        color #505050
+        line-height 18px
+        font-size 16px
+  h3
+    padding 20px 35px
+    color #000
+    font-size 24px
+    line-height 29px
+    font-weight 500
+  img
+    height 180px
+    transform scale(1.1)
+    transition .69s
+  p
+    padding 20px 35px
+    max-height 110px
+    margin-bottom 25px
+    overflow hidden
+    color #505050
+    font-size 16px
+    font-weight 400
+    line-height 28px
+
+
+
+
+
+.article-guide
+  position relative
+  transition .33s
+  margin-bottom 20px
+  border-radius 5px
+  overflow hidden
+  &:hover
+    transform scale(1.1)
+    .button
+      &:after
+        transform translateX(50px)
+  &:before
+    content ''
+    background-color #000000
+    opacity 0.23
+    position absolute
+    top 0
+    bottom 0
+    left 0
+    right 0
+    z-index -1
+  a
+    padding 50px
+    align-items center
+    justify-content space-between
+  img
+    position absolute
+    z-index -2
+    left 0
+  h3
+    color #ffffff
+    font-size 80px
+    font-weight 500
