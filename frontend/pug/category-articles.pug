@@ -12,16 +12,17 @@ html(lang='en')
           img(src='images/initial-1.jpg' alt='')        
         .right-side
           h1 News
-          .buttons
-            a(href='category-articles.html').active  News
-            a(href='category-guides.html') Travel Guide
-            a(href='#') Hottest spots
-            a(href='#') Fresh deals
+          h2 
+            span Discover Sicily. Places worth visiting
           hr
           h3 
           p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. labore et dolore magna aliqua. Ut enim ad minim veniam. Read more
-          a(href='#').button.button--yellow  Discover
-      .flex.articles
+          a(href='page-article.html').button.button--yellow  Discover
+      section.section-description-category.flex.container
+        h2 News
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      .flex.articles.container
+        +article('Discover Sicily. Places worth visiting')
         +article('Discover Sicily. Places worth visiting')
         +article('Discover Sicily. Places worth visiting')
         +article('Discover Sicily. Places worth visiting')

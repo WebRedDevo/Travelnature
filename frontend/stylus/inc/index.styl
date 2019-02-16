@@ -63,7 +63,7 @@
 
 .section
   &--initial-screen
-    padding-top 150px
+    margin-top 130px
     h1
       color #34343f
       font-size 115px
@@ -71,20 +71,31 @@
       line-height 144px
       letter-spacing 11px
       padding 25px 40px
+      mix-blend-mode lighten
       background #fff
+      position relative
       margin-left -350px
     .left-side
       max-width 805px
       min-height 610px
+
     .right-side
       padding 0 35px
-
+      h2
+        margin-left -100px
+        max-width 80%
+        margin-top 30px
+        line-height 82px
+        text-align left
+        span
+          background #fff
+          padding 8px 0
+          box-shadow -7px 7px 4px rgba(0,0,0,.16)
       h3
         color #34343f
         font-size 24px
         font-weight 500
         line-height 26px
-
       p
         color #34343f
         font-size 16px
@@ -97,7 +108,8 @@
         font-weight 700
         background-color #edba51
         padding 40px 50px
-        margin-top 60px
+        margin-top 40px
+        margin-bottom 40px
         margin-left -100px
         letter-spacing 3.5px
         display inline-flex
@@ -108,8 +120,12 @@
           height 1px
           margin-left 22px
           background-color #000000
+          transition .33s
+        &:hover
+          &:after
+            transform translateX(50px)
     hr
-      margin 30px 0 40px
+      margin 30px 0 30px
     .buttons
       .active
         background-color #edba51

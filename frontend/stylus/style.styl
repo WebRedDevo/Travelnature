@@ -1,14 +1,19 @@
 @import '../fonts/fonts.css'
-
+:root
+  --yellow #edba51
+  --blackColor #232323
 body
   font-family sans-serif
 .flex
   display flex
+.container
+  max-width 1280px
+  margin auto
 .main
   .article-post
-    max-width calc(25% - 20px)
+    max-width calc(33% - 20px)
     background #fff
-    border-radius 15px
+    border-radius 10px
     margin 0 10px
     box-shadow 0 0 15px rgba(0,0,0 .10)
     padding 20px 0
@@ -50,16 +55,16 @@ body
       font-weight 400
       line-height 28px
   .articles
-    margin 50px 0
-    justify-content center
     flex-wrap wrap
     padding 0 10px
-
-
+.button--yellow
+  background var(--yellow)
+  color var(--blackColor)
 .footer
-  background #121212
+  background #232323
   height 300px
 @import 'inc/reset.styl'
 @import 'inc/header.styl'
 @import 'inc/index.styl'
 @import 'inc/page-article.styl'
+@import 'inc/category.styl'

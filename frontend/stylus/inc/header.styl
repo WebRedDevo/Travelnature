@@ -1,30 +1,63 @@
 .header
-  z-index 99
   position absolute
-  justify-content flex-start
+  flex-direction column
   width 100%
   top 0
-  padding 40px 50px
-
   align-items center
+  &__fixed
+    width 100%
+    left 0
+    right 0
+    position fixed
+    background #232323
+    padding 0 50px
+    z-index 99
+    box-shadow 0 7px 4px rgba(0,0,0,.16)
+    justify-content space-between
+    align-items center
+    height 70px
+    border-radius 0 0 7px 7px
+  &__nav
+    margin-top 100px
+
 .logotype
   color #303741
   font-size 24px
   font-weight 500
   background-color #edba51
   padding 5px 16px
-
-.header__nav
-  margin-left 135px
+.form-search
+  position relative
+  align-items center
+  &__filed
+    border-radius 4px
+    background-color #f6f6f6
+    padding 9px 29px
+    width 380px
+  &__submit
+    position absolute
+    right -20px
+    padding 3px
+    border-radius 4px
+.login
+  color #fff
 .nav__list-item
+  .active
+    background-color #edba51
+    padding 5px 15px
+    margin-right 20px
+    text-transform uppercase
+    &:hover
+      &:after,&:before
+        width 0
   &.active,&:hover
     a
       &:after
         width 100%
   a
     color #303741
-    font-size 14px
-    font-weight 600
+    font-size 15px
+    font-weight 500
     margin-right 38px
     position relative
     padding-bottom 2px

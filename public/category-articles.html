@@ -6,13 +6,19 @@
     <title>main page</title>
   </head>
   <body>
-    <header class="header flex"><a class="logotype" href="index.html">Traveo</a>
+    <header class="header flex">
+      <div class="header__fixed container flex"><a class="logotype" href="index.html">Traveo</a>
+        <form class="header__form form-search flex" method="GET"> 
+          <input class="form-search__filed" type="text" name="search" placeholder="Find trips, fligths and hotels…">
+          <input class="form-search__submit button--yellow" type="submit" value="search">
+        </form><a class="login" href="#">Sign in</a>
+      </div>
       <nav class="header__nav">
         <ul class="nav__list flex">
-          <li class="nav__list-item"><a href="#">About</a></li>
-          <li class="nav__list-item"><a href="#">Clients</a></li>
-          <li class="nav__list-item"><a href="#">Deals</a></li>
-          <li class="nav__list-item"><a href="#">Contact</a></li>
+          <li class="nav__list-item"><a class="active" href="category-articles.html">News</a></li>
+          <li class="nav__list-item"><a href="category-guides.html">Travel Guide</a></li>
+          <li class="nav__list-item"><a href="#">Hottest spots</a></li>
+          <li class="nav__list-item"><a href="#">Fresh deals</a></li>
         </ul>
       </nav>
     </header>
@@ -21,13 +27,32 @@
         <div class="left-side"><img src="images/initial-1.jpg" alt=""></div>
         <div class="right-side">
           <h1>News</h1>
-          <div class="buttons"><a class="active" href="category-articles.html"> News</a><a href="category-guides.html">Travel Guide</a><a href="#">Hottest spots</a><a href="#">Fresh deals</a></div>
+          <h2> <span>Discover Sicily. Places worth visiting</span></h2>
           <hr>
           <h3> </h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. labore et dolore magna aliqua. Ut enim ad minim veniam. Read more</p><a class="button button--yellow" href="#"> Discover</a>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. labore et dolore magna aliqua. Ut enim ad minim veniam. Read more</p><a class="button button--yellow" href="page-article.html"> Discover</a>
         </div>
       </section>
-      <div class="flex articles">
+      <section class="section-description-category flex container">
+        <h2>News</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </section>
+      <div class="flex articles container">
+            <article class="article-post"><a href="page-article.html">
+                <h3>Discover Sicily. Places worth visiting</h3>
+                <div class="article-post__info flex">
+                  <div class="info-item flex"><span>1234 </span>
+                        <svg class="icon icon-eye ">
+                          <use xlink:href="#icon-eye"></use>
+                        </svg>
+                  </div>
+                  <div class="info-item flex"><span>89</span>
+                        <svg class="icon icon-comment ">
+                          <use xlink:href="#icon-comment"></use>
+                        </svg>
+                  </div>
+                </div><img src="images/main-bg-1.jpg" alt="">
+                <p>Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco </p></a></article>
             <article class="article-post"><a href="page-article.html">
                 <h3>Discover Sicily. Places worth visiting</h3>
                 <div class="article-post__info flex">
