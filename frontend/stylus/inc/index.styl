@@ -1,74 +1,212 @@
 .main
+  .bg-img
+    position relative
+    content ''
+    background url(../images/wallpaper-1.jpg)
+    background-size cover
+    width 100%
+    height 100%
+    z-index 0
+    top 0
+    background-attachment fixed
   hr
     height 1px
     border 0
     background-color #d0d4d8
     opacity 0.5
-  &__section
-    .container
-      max-width 970px
-      margin 0 auto
-      padding 72px 0
-    h2
-      color #4a4a4a
-      font-size 48px
-      font-weight 400
-      line-height 38px
-      text-align center
-      margin-bottom 33px
-    h3
-      color #505050
-      font-size 24px
-      font-weight 500
-      margin-bottom 5px
-    p
-      color #505050
-      font-size 16px
-      font-weight 400
-      line-height 28px
+  &-aside
+    position fixed
+    left 0
+    align-items center
+    height 100vh
+    z-index 99
+    &:before
+      width 1px
+      height 85%
+      content ''
+      position absolute
+      left 0
+      opacity .5
+      background #ccc
+      right 0
+      margin auto
+    &__nav-list
+        flex-direction column
+        align-items center
+    &__nav-item
+      margin-bottom 25px
+      width 60px
+      height 60px
+      justify-content center
       a
-        color #4a90e2
-        font-size 16px
-        margin-left 8px
-        font-weight 600
-        line-height 28px
-.article-news
-  max-width 250px
-  margin-right 35px
-  h3
-    color #ffffff
-    font-family Akrobat
-    font-size 24px
-    font-weight 600
-    letter-spacing 1.41px
-    margin-bottom 13px
+        background #fff
+        width 10px
+        height 10px
+        border-radius 50%
+        display inline-block
+        position relative
+        &:before
+          content ''
+          width 36px
+          height 36px
+          background #ccc
+          position absolute
+          border-radius 50%
+          left -13px
+          top -13px
+          opacity .5
+          transition .33s
+          transform scale(0)
+      &:last-child
+        margin-bottom 0
+      &.active,&:hover
+        a
+          &:before
+            transform scale(1.2)
+
+
+
+  &__screen
+    min-height 100vh
+    hr
+      width 1280px
+      left 0
+      right 0
+      margin auto
+      position absolute
+      bottom 0
+      z-index 3
+      height 1px
+      background #ccc
+
+    &--center
+      justify-content center
+      align-items center
+      text-align center
+      flex-direction column
+      .main__screen-info
+        max-width 70%
+    &-info
+      max-width 60%
+      padding 0 50px
+      h1
+        color #fff
+        font-size 95px
+        font-weight 500
+      .wavy
+        text-decoration underline
+        text-decoration-style wavy
+        text-decoration-color #edba51
+        text-decoration-skip-ink none
+      h2
+        color #fff
+        font-size 75px
+        font-weight 500
+      p
+        color #fff
+        margin-top 35px
+        font-size 19px
+        font-weight 300
+        line-height 25px
+    .button
+      margin-top 35px
+
+
+
+
+// section what we do
+
+
+.section--what-we-do
+  .main__screen-info
+    z-index 3
+  &__icons
+    margin-top 50px
+.bg-inherit
+  background inherit
+  &.bg-dark
+    &:before
+      z-index 2
+.what-we-do__icon
+  transform translateZ(0)
+  flex-direction column
+  z-index 2
+  width calc(25% - 25px )
+  background inherit
+  margin-right 25px
+  overflow hidden
+  position relative
+  border-radius 5px
+  box-shadow 0 14px 16px rgba(0,0,0,0.15)
+  &:last-child
+    margin-right 0
+  &:before
+    content ''
+    background inherit
+    position absolute
+    width 100%
+    height 100%
+    z-index 0
+    box-shadow inset 0 0 250px rgba(255, 255, 255, 0.12)
+    filter blur(10px)
+  .wrap
+    position relative
+    z-index 3
+    padding 30px 0
+  h6
+    color #fff
+    font-size 26px
+    margin-top 20px
+    font-weight 300
   p
-    color #ffffff
-    font-family Akrobat
-    font-size 14px
-    font-weight 200
-    letter-spacing 1.23px
-    strong
-      font-weight 700
-  a
-    color #ffffff
-    font-family "Akrobat"
-    font-size 11px
-    font-weight 600
-    letter-spacing 1.23px
-    text-align right
-    float right
-    padding-bottom 2px
-    border-bottom 1px solid #fff
+    color #ccc
+    margin-top 10px
+    font-weight 100
+    font-size 18px
+    line-height 22px
+
+
+
+
+
+
+
+
+.main__section
+  .container
+    max-width 970px
+    margin 0 auto
+    padding 72px 0
+  h2
+    color #4a4a4a
+    font-size 48px
+    font-weight 400
+    line-height 38px
+    text-align center
+    margin-bottom 33px
+  h3
+    color #505050
+    font-size 24px
+    font-weight 500
+    margin-bottom 5px
+  p
+    color #505050
+    font-size 16px
+    font-weight 400
+    line-height 28px
+    a
+      color #4a90e2
+      font-size 16px
+      margin-left 8px
+      font-weight 600
+      line-height 28px
 
 .section
   &--initial-screen
     position relative
     padding-bottom 50px
     box-shadow 0 -8px 35px rgba(0, 0, 0, 0.04)
-    .wallpaper
-      position absolute
-      z-index -2
+
     &.category-journal
       .right-side
         &:before
@@ -107,7 +245,7 @@
           bottom 0
           left 0
           right 0
-    
+
     h1
       font-size 115px
       font-weight 600
@@ -185,30 +323,7 @@
           transition .33s
         &:last-child
           margin-right 0
-  &--what-we-do
-    &__icons
-      margin-top 45px
-      justify-content center
-    .what-we-do__icon
-      text-align center
-      width 33%
-      flex-direction column
-      justify-content center
-      .icon
-        width 150px
-        height 150px
-        margin 0 auto 26px
-      strong
-        color #4e5665
-        font-size 22px
-        font-weight 500
-        line-height 30px
-        margin-bottom 5px
-        text-transform uppercase
-      p
-        color #909090
-        font-size 14px
-        font-weight 500
+
   &--happy-clients
     &__response
       align-items center

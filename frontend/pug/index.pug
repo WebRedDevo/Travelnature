@@ -6,40 +6,58 @@ html(lang='en')
     title main page
   body
     include inc/header.pug
-    main.main 
-      section.main__section.section--initial-screen.flex.top
-        .left-side
-          img(src='images/main-bg-1.jpg' alt='')        
-        .right-side
-          h1 Travel Guide
-          .buttons
-            a(href='category-articles.html') News
-            a(href='#').active Travel Guide
-            a(href='#') Hottest spots
-            a(href='#') Fresh deals
+    main.main
+      aside.main-aside.flex
+        ul.main-aside__nav-list.flex
+          li.main-aside__nav-item.flex
+            a(href='#section-1')
+          li.main-aside__nav-item.flex
+            a(href='#section-2')
+          li.main-aside__nav-item.flex
+            a(href='#section-3')
+          li.main-aside__nav-item.flex.active
+            a(href='#section-4')
+          li.main-aside__nav-item.flex
+            a(href='#section-5')
+              
+      section.main__screen.flex#section-1.bg-img.bg-dark
+          .container
+            .main__screen-info
+              h1 
+                span.wavy Traveo 
+                |is a travel template
+              p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+              a(href='page-article.html').button.button--yellow  Discover
           hr
-          p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Read more
-          a(href='#').button.button--yellow  Discover
-      section.main__section.section--what-we-do
-        .container
-          h2 What We Do?
-          p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            a(href='#') Read More ››
-          .section--what-we-do__icons.flex
+      section.main__screen.p__r.section--what-we-do.flex#section-2.bg-inherit.bg-dark.bg-img
+        .container.main__screen--center.bg-inherit.flex.p__r
+          .main__screen-info
+            h2 What 
+              span.wavy We Do?
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          .section--what-we-do__icons.flex.bg-inherit
             .what-we-do__icon.flex
-              +icon('avia-tickets')
-              strong Tours
-              p Trips
+              .wrap
+                +icon('avia-tickets')
+                h6 Tours
+                p Lorem ipsum dolor sit amett, consectetur adipiscing
             .what-we-do__icon.flex
-              +icon('avia-tickets')
-              strong Flight
-              p Tickets
+              .wrap
+                +icon('avia-tickets')
+                h6 Flight
+                p Lorem ipsum dolor sit amett, consectetur adipiscing
             .what-we-do__icon.flex
-              +icon('avia-tickets')
-              strong Hotel
-              p Booking
-        hr
-      section.main__section.section--happy-clients
+              .wrap
+                +icon('avia-tickets')
+                h6 Hotel
+                p Lorem ipsum dolor sit amett, consectetur adipiscing
+            .what-we-do__icon.flex
+              .wrap
+                +icon('avia-tickets')
+                h6 Hotel
+                p Lorem ipsum dolor sit amett, consectetur adipiscing
+      
+      section.main__section.section--happy-clients#section-3.main--screen
         .container
           h2 Happy Clients
           p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.

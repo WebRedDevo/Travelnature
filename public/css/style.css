@@ -9,6 +9,8 @@
 body
 {
     font-family: sans-serif;
+
+    scroll-behavior: smooth;
 }
 
 .flex
@@ -25,8 +27,14 @@ body
 
 .container
 {
+    width: 100%;
     max-width: 1280px;
     margin: auto;
+}
+
+.p__r
+{
+    position: relative;
 }
 
 .wallpaper
@@ -132,7 +140,7 @@ body
 
     content: '';
 
-    opacity: .23;
+    opacity: .29;
     background: #000;
 }
 
@@ -334,6 +342,22 @@ input[type='submit'] + label
     background: #303741;
 }
 
+.main .bg-img
+{
+    position: relative;
+    z-index: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    content: '';
+
+    background: url('../images/wallpaper-1.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+}
+
 .main hr
 {
     height: 1px;
@@ -341,6 +365,271 @@ input[type='submit'] + label
     opacity: .5;
     border: 0;
     background: #d0d4d8;
+}
+
+.main-aside
+{
+    position: fixed;
+    z-index: 99;
+    left: 0;
+
+    height: 100vh;
+
+    align-items: center;
+}
+
+.main-aside:before
+{
+    position: absolute;
+    right: 0;
+    left: 0;
+
+    width: 1px;
+    height: 85%;
+    margin: auto;
+
+    content: '';
+
+    opacity: .5;
+    background: #ccc;
+}
+
+.main-aside__nav-list
+{
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.main-aside__nav-item
+{
+    width: 60px;
+    height: 60px;
+    margin-bottom: 25px;
+
+    justify-content: center;
+}
+
+.main-aside__nav-item a
+{
+    position: relative;
+
+    display: inline-block;
+
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+    background: #fff;
+}
+
+.main-aside__nav-item a:before
+{
+    position: absolute;
+    top: -13px;
+    left: -13px;
+
+    width: 36px;
+    height: 36px;
+
+    content: '';
+    transition: .33s;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+
+    opacity: .5;
+    border-radius: 50%;
+    background: #ccc;
+}
+
+.main-aside__nav-item:last-child
+{
+    margin-bottom: 0;
+}
+
+.main-aside__nav-item.active a:before,
+.main-aside__nav-item:hover a:before,
+.main-aside__nav-item:focus a:before
+{
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+}
+
+.main__screen
+{
+    min-height: 100vh;
+}
+
+.main__screen hr
+{
+    position: absolute;
+    z-index: 3;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 1280px;
+    height: 1px;
+    margin: auto;
+
+    background: #ccc;
+}
+
+.main__screen--center
+{
+    flex-direction: column;
+
+    text-align: center;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.main__screen--center .main__screen-info
+{
+    max-width: 70%;
+}
+
+.main__screen-info
+{
+    max-width: 60%;
+    padding: 0 50px;
+}
+
+.main__screen-info h1
+{
+    font-size: 5.9375rem;
+    font-weight: 500;
+
+    color: #fff;
+}
+
+.main__screen-info .wavy
+{
+    text-decoration: underline;
+
+    -webkit-text-decoration-style: wavy;
+
+            text-decoration-style: wavy;
+    -webkit-text-decoration-color: #edba51;
+            text-decoration-color: #edba51;
+    text-decoration-skip-ink: none;
+}
+
+.main__screen-info h2
+{
+    font-size: 4.6875rem;
+    font-weight: 500;
+
+    color: #fff;
+}
+
+.main__screen-info p
+{
+    font-size: 1.1875rem;
+    font-weight: 300;
+    line-height: 1.5625rem;
+
+    margin-top: 35px;
+
+    color: #fff;
+}
+
+.main__screen .button
+{
+    margin-top: 35px;
+}
+
+.section--what-we-do .main__screen-info
+{
+    z-index: 3;
+}
+
+.section--what-we-do__icons
+{
+    margin-top: 50px;
+}
+
+.bg-inherit
+{
+    background: inherit;
+}
+
+.bg-inherit.bg-dark:before
+{
+    z-index: 2;
+}
+
+.what-we-do__icon
+{
+    position: relative;
+    z-index: 2;
+
+    overflow: hidden;
+    flex-direction: column;
+
+    width: calc(25% - 25px);
+    margin-right: 25px;
+
+    -webkit-transform: translateZ(0);
+
+            transform: translateZ(0);
+
+    border-radius: 5px;
+    background: inherit;
+    box-shadow: 0 14px 16px rgba(0,0,0,.15);
+}
+
+.what-we-do__icon:last-child
+{
+    margin-right: 0;
+}
+
+.what-we-do__icon:before
+{
+    position: absolute;
+    z-index: 0;
+
+    width: 100%;
+    height: 100%;
+
+    content: '';
+
+    background: inherit;
+    box-shadow: inset 0 0 250px rgba(255,255,255,.12);
+
+    -webkit-filter: blur(10px);
+
+            filter: blur(10px);
+}
+
+.what-we-do__icon .wrap
+{
+    position: relative;
+    z-index: 3;
+
+    padding: 30px 0;
+}
+
+.what-we-do__icon h6
+{
+    font-size: 1.625rem;
+    font-weight: 300;
+
+    margin-top: 20px;
+
+    color: #fff;
+}
+
+.what-we-do__icon p
+{
+    font-size: 1.125rem;
+    font-weight: 100;
+    line-height: 1.375rem;
+
+    margin-top: 10px;
+
+    color: #ccc;
 }
 
 .main__section .container
@@ -393,52 +682,6 @@ input[type='submit'] + label
     color: #4a90e2;
 }
 
-.article-news
-{
-    max-width: 250px;
-    margin-right: 35px;
-}
-
-.article-news h3
-{
-    font: 600 1.5rem Akrobat;
-
-    margin-bottom: 13px;
-
-    letter-spacing: 0.08813rem;
-
-    color: #fff;
-}
-
-.article-news p
-{
-    font: 200 0.875rem Akrobat;
-
-    letter-spacing: 0.07688rem;
-
-    color: #fff;
-}
-
-.article-news p strong
-{
-    font-weight: 700;
-}
-
-.article-news a
-{
-    font: 600 0.6875rem 'Akrobat';
-
-    float: right;
-
-    padding-bottom: 2px;
-
-    text-align: right;
-    letter-spacing: 0.07688rem;
-
-    color: #fff;
-    border-bottom: 1px solid #fff;
-}
-
 .section--initial-screen
 {
     position: relative;
@@ -446,12 +689,6 @@ input[type='submit'] + label
     padding-bottom: 50px;
 
     box-shadow: 0 -8px 35px rgba(0,0,0,.04);
-}
-
-.section--initial-screen .wallpaper
-{
-    position: absolute;
-    z-index: -2;
 }
 
 .section--initial-screen.category-journal .right-side:before
@@ -652,52 +889,6 @@ input[type='submit'] + label
 .section--initial-screen .buttons a:last-child
 {
     margin-right: 0;
-}
-
-.section--what-we-do__icons
-{
-    margin-top: 45px;
-
-    justify-content: center;
-}
-
-.section--what-we-do .what-we-do__icon
-{
-    flex-direction: column;
-
-    width: 33%;
-
-    text-align: center;
-
-    justify-content: center;
-}
-
-.section--what-we-do .what-we-do__icon .icon
-{
-    width: 150px;
-    height: 150px;
-    margin: 0 auto 26px;
-}
-
-.section--what-we-do .what-we-do__icon strong
-{
-    font-size: 1.375rem;
-    font-weight: 500;
-    line-height: 1.875rem;
-
-    margin-bottom: 5px;
-
-    text-transform: uppercase;
-
-    color: #4e5665;
-}
-
-.section--what-we-do .what-we-do__icon p
-{
-    font-size: 0.875rem;
-    font-weight: 500;
-
-    color: #909090;
 }
 
 .section--happy-clients__response
