@@ -1,0 +1,118 @@
+
+
+
+.select-category
+  margin-top 40px
+  .category
+    margin-right 10px
+.category
+  border-radius 3px
+  padding 3px 10px
+  color #ffffff
+  font-size 14px
+  font-weight 400
+  &.category--blue
+    background-color #4a90e2
+  &.category--yellow
+    background-color #f5a623
+  &.category--green
+    background-color #69d100
+  &.category--green
+    background-color #69d100
+  &.category--purple
+    background-color #9e47ea
+.journal-articles
+    grid-template-columns repeat(6,1fr)
+    grid-auto-rows 340px
+    grid-gap 20px
+    .subscribe
+      grid-row 3
+      grid-column 1/7
+      position relative
+      padding 65px 0
+      &:before
+        content ''
+        background-color #81b9f9
+        opacity 0.1
+        position absolute
+        transform scaleX(1.3)
+        left 0
+        top 0
+        bottom 0
+        right 0
+      &:after
+        content ''
+        position absolute
+        background-image url(../images/email-subscribe.png)
+        background-repeat no-repeat
+        background-size contain
+        bottom 0
+        width 500px
+        height 90%
+        right 0
+      h2
+        color #56cad8
+        font-size 36px
+        font-weight 500
+        letter-spacing 6.35px
+        margin-bottom 15px
+      p
+        color #2d8792
+        font-size 20px
+        font-weight 500
+      &__form
+        position relative
+        margin-top 50px
+      &__input
+        box-shadow 0 2px 4px rgba(0, 0, 0, 0.15)
+        border-radius 8px 0 0 8px
+        background-color #ffffff
+        color #9b9b9b
+        font-size 20px
+        font-weight 400
+        padding 30px 50px
+      &__submit
+        background-color #de8e68
+        color #ffffff
+        font-size 20px
+        font-weight 500
+        border-radius 0 8px 8px 0
+        padding 30px
+    .journal-article
+      position relative
+      border-radius 6px
+      overflow hidden
+      &:before
+        background-image linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%)
+        opacity 1
+      a
+        height 100%
+      &__header
+        padding 20px 50px
+      &__footer
+        padding 20px 50px
+        position absolute
+        bottom 0
+        .info
+          color #d9d9d9
+          font-size 12px
+          font-weight 500
+      h3
+        color #ffffff
+        font-size 36px
+        font-weight 500
+        line-height 39px
+        margin-bottom 15px
+      img
+        position absolute
+        z-index -2
+      &:nth-child(5n+1)
+        grid-column 1/4
+      &:nth-child(5n+2)
+        grid-column 4/7
+      &:nth-child(5n+3)
+        grid-column 1/3
+      &:nth-child(5n+4)
+        grid-column 3/5
+      &:nth-child(5n+5)
+        grid-column 5/7

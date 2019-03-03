@@ -1,0 +1,37 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    link(rel='stylesheet' href='css/style.min.css')
+    title main page
+  body
+    include inc/header.pug
+    main.main 
+      article.page-articles.top
+        button.close
+          +icon('cancel')
+        h1 Discover Sicily. Places worth visiting
+        .article-post__info.flex
+          .info-item.flex
+            +icon('eye')
+            span 1234 Views
+          .info-item.flex
+            +icon('comment')
+            span 89 Comments
+            
+        p Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+        img(src='images/main-bg-1.jpg' alt='')
+        p Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+        p Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+        h2  Places worth visiting
+        img(src='images/main-bg-1.jpg' alt='')
+        p Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+        h3 Consectetur adipiscing
+        p Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+        .quote
+          p Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco Ut enim ad minim veniam, quis nostrud exercitation ullamco Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+      .flex.articles.container
+        +article('Discover Sicily. Places worth visiting')
+        +article('Discover Sicily. Places worth visiting')
+        +article('Discover Sicily. Places worth visiting')
+    include inc/footer.pug      

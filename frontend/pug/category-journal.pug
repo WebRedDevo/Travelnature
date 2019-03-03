@@ -1,0 +1,54 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    link(rel='stylesheet' href='css/style.min.css')
+    title Category journal
+  body
+    include inc/header.pug
+      
+    main.main 
+      section.main__section.section--initial-screen.flex.top.category-journal.bg-dark
+        img(src='images/destinations-wallpaper.jpg' alt='').wallpaper
+        .left-side
+                 
+        .right-side
+          h1 Travel Journal
+          h2 
+            span How to travel with a partner and not kill each other
+    
+          a(href='page-destination.html').button.button--yellow  Read more
+      section.section-description-category.container
+        .flex
+          h2 Travel Guides
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        .select-category
+          a(href="#").category.category--blue Travel ideas 
+          a(href="#").category.category--yellow Travel tip
+          a(href="#").category.category--purple Guides
+          a(href="#").category Visas
+          a(href="#").category.category--green How much
+      .container.grid.journal-articles
+        +journal-article('How to travel with a partner and not kill each other','Travel ideas', 'initial-1.jpg')(class='category--blue')
+        +journal-article('How to save money on a trip?','Travel tip' )(class='category--yellow')
+        +journal-article('How to save money on a trip?','How much', 'initial-1.jpg')(class='category--green')
+        +journal-article('How to save money on a trip?','How much')(class='category--green')
+        +journal-article('How to save money on a trip?','How much')(class='category--green')
+        +journal-article('How to save money on a trip?','How much')(class='category--green')
+        +journal-article('How to save money on a trip?','Travel tip')(class='category--green')
+        +journal-article('How to save money on a trip?','How much')(class='category--green')
+        +journal-article('How to save money on a trip?','How much')(class='category--green')
+        +journal-article('How to save money on a trip?','Travel tip')(class='category--green')
+        +journal-article('How to save money on a trip?','How much')(class='category--green')
+        +journal-article('How to save money on a trip?','Travel tip')(class='category--green')
+        +journal-article('How to save money on a trip?','Travel tip')(class='category--green')
+        +journal-article('How to save money on a trip?','How much')(class='category--green')
+        +journal-article('How to save money on a trip?','Travel tip')(class='category--green')
+        .subscribe
+          h2 Newsletter
+          p News, discounts, sales, contests and a bit of art:
+          form.subscribe__form(method='POST').flex
+            input(type='text' placeholder='Email address').subscribe__input
+            input(type='submit' value='Subscribe').subscribe__submit
+
+    include inc/footer.pug      

@@ -1,6 +1,6 @@
 node_modules
 package-lock.json
 
-frontend
-gulpfile.js
-package.json
+#frontend
+#gulpfile.js
+#package.json

@@ -1,0 +1,50 @@
+doctype html
+html(lang='en')
+  head
+    include inc/head.pug
+    title Special travel sales
+  body
+    include inc/header.pug
+    main.main 
+      section.flex.category-sales.bg-dark
+        img(src='images/sales.jpg' alt='').wallpaper
+        .category-sales__info
+          h1 Special travel sales
+          p See the special trips
+          hr
+        .flex.sales-articles
+          +article-sale('Thailand','$670','30%')
+          +article-sale('Italy','$860','25%')
+          +article-sale('Spain','$670','40%')
+          +article-sale('Dominicana','$670','25%')
+          
+      section.section--sales.container
+        .section--sales__info
+          h2 The most popular
+          p See the most popular destinations
+        .flex.section--sales__trips
+          +article-trip-sales
+          +article-trip-sales
+          +article-trip-sales
+          +article-trip-sales
+          +article-trip-sales
+          +article-trip-sales
+          +article-trip-sales
+          +article-trip-sales
+          +article-trip-sales
+          
+      section.section--sales.container
+        .section--sales__info
+          h2 Europe trips
+          p See the most popular destinations
+        .flex.section--sales__trips
+          +article-trip-sales
+          +article-trip-sales
+          +article-trip-sales
+          +article-trip-sales
+          +article-trip-sales
+          +article-trip-sales
+          +article-trip-sales
+          +article-trip-sales
+          +article-trip-sales
+    include inc/footer.pug      

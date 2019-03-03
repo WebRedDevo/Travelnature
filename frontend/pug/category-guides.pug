@@ -1,0 +1,22 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    link(rel='stylesheet' href='css/style.min.css')
+    title main page
+  body
+    include inc/header.pug
+      
+    main.main 
+      section.main__section.section--initial-screen.top.category-guides.flex
+        h1 Travel Guides
+        hr
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      section.section-description-category
+      .container
+        +guide('Capaci', 'initial-1.jpg')
+        +guide('Palermo')
+        +guide('Tapaera', 'sales-2.jpg')
+        +guide('Limpopo','special-deals-1.jpg')
+
+    include inc/footer.pug      

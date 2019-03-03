@@ -1,0 +1,37 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    link(rel='stylesheet' href='css/style.min.css')
+    title main page
+  body
+    include inc/header.pug
+      
+    main.main 
+      section.main__section.section--initial-screen.flex.top.bg-dark.category-articles
+        img(src='images/initial-1.jpg' alt='').wallpaper    
+        .left-side
+             
+        .right-side
+          h1 Travel  News
+          h2 
+            span Discover Sicily. Places worth visiting
+          hr
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. labore et dolore magna aliqua. Ut enim ad minim veniam. Read more
+          a(href='page-article.html').button.button--yellow  Discover
+      section.section-description-category.flex.container
+        h2 News
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      .flex.articles.container
+        +article('Discover Sicily. Places worth visiting')
+        +article('Dolor sit amet, consectetur adipiscing elit', 'destinations-wallpaper.jpg')
+        +article('Incididunt ut labore et dolore magna aliqua','img-response-2.jpg')
+        +article('Exercitation ullamco laboris nisi ut aliquip ', 'special-deals-1.jpg')
+        +article('Discover Sicily. Places worth visiting','initial-1.jpg')
+        +article('Discover Sicily. Places worth visiting','img-response-1.JPG')
+        +article('Discover Sicily. Places worth visiting')
+        +article('Discover Sicily. Places worth visiting')
+        +article('Discover Sicily. Places worth visiting')
+        
+      
+    include inc/footer.pug      
